@@ -9,7 +9,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 WORKDIR /var/www/backend
 COPY . .
 
-RUN composer install
+RUN composer install --no-dev --optimize-autoloader
 
 RUN chown -R www-data: /var/www/backend
 
