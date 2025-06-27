@@ -46,13 +46,6 @@ services:
     stdin_open: true
     tty: true
 
-  java-client:
-    build:
-      context: ./java-client
-    container_name: blog-java-client
-    # A activer quand le JAR sera pret
-    # command: ["java", "-jar", "client.jar"]
-
 volumes:
   pgdata:
   
